@@ -2,12 +2,12 @@
 Smart Classroom Lighting — FastAPI
 เพื่อนดึงข้อมูลจาก PostgreSQL ผ่าน REST API นี้ได้เลย
 """
+import os, asyncpg ,uvicorn
 from fastapi import FastAPI, HTTPException, Query, Depends, Security
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from pydantic import BaseModel
 from typing import Optional
-import os, asyncpg ,uvicorn
 from datetime import datetime
 
 # ──────────────────────────────────────────────
